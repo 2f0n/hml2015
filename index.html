@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="https://cdn.rawgit.com/jsoma/tabletop/master/src/tabletop.js?_=1460089190745">
+</script>
+</head>
+<body>
+
+<script>
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ZQiQ89LzyCt3A1TKfAP6FhGkKy0KQJ4FefAjf5Feerw/pubhtml';
+
+function renderSpreadsheetData() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: draw,
+                     simpleSheet: true } )
+}
+
+function draw(data, tabletop) {
+  console.log(data);
+}
+
+renderSpreadsheetData();
+</script>
+</body>
+</html>
