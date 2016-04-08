@@ -6,6 +6,7 @@
 <body>
 
 <script>
+var data = [];
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ZQiQ89LzyCt3A1TKfAP6FhGkKy0KQJ4FefAjf5Feerw/pubhtml';
 
 function renderSpreadsheetData() {
@@ -14,8 +15,9 @@ function renderSpreadsheetData() {
                      simpleSheet: true } )
 }
 
-function draw(data, tabletop) {
-  console.log(data);
+function draw(rows, tabletop) {
+	data = rows;
+  console.log(rows);
 }
 
 renderSpreadsheetData();
