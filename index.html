@@ -7,7 +7,6 @@
 </script>
         <style>
             svg {
-                border: solid 1px #ccc;
                 font: 10px sans-serif;
                 shape-rendering: crispEdges;
             }
@@ -33,8 +32,8 @@
                 var item = rows[i];
                 matrix.push([i, item.arrival_year - item.birth_year, item.current_year - item.arrival_year, 1]);
               }
-              var w = 960,
-            h = 500
+              var w = 1160,
+            h = 600
             // create canvas
             var svg = d3.select("#viz").append("svg:svg")
             .attr("class", "chart")
