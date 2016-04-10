@@ -80,7 +80,7 @@
             .enter().append("svg:g")
             .attr("class", "valgroup")
             .style("fill", function(d, i) { console.log({d: d, i:i});return z(i); })
-            //.style("stroke", function(d, i) { return d3.rgb(z(i)).darker(); });
+            .style("stroke", function(d, i) { return "white"; /*d3.rgb(z(i)).darker();*/ });
             // Add a rect for each date.
             var rect = valgroup.selectAll("rect")
             .data(function(d){return d;})
