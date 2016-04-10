@@ -79,9 +79,7 @@
             .data(stacked)
             .enter().append("svg:g")
             .attr("class", "valgroup")
-            .attr("filter", "url(#clippy)")
-    .attr("class", "extent")
-    .attr("style", "cursor:move; opacity:0.2; fill: #FF9000")
+            .attr("style", "cursor:move; opacity:0.2; fill: #FF9000")
             .style("fill", function(d, i) { console.log({d: d, i:i});return z(i); })
             //.style("stroke", function(d, i) { return "white"; /*d3.rgb(z(i)).darker();*/ });
             // Add a rect for each date.
