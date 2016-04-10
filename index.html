@@ -85,10 +85,10 @@
             var rect = valgroup.selectAll("rect")
               .data(function(d){return d;})
               .enter().append("svg:rect")
-              .attr("x", function(d) { return x(d.x) + 10; })
+              .attr("x", function(d) { return x(d.x); })
               .attr("y", function(d) { return -y(d.y0) - y(d.y); })
               .attr("height", function(d) { return y(d.y); })
-              .attr("width", x.rangeBand() - 1);
+              .attr("width", x.rangeBand());
             }
             renderSpreadsheetData();
         </script>
