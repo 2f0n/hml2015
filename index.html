@@ -74,12 +74,21 @@
             console.log("x.domain(): " + x.domain())
             console.log("y.domain(): " + y.domain())
             console.log("------------------------------------------------------------------");
+            svg.append("defs").append("filter")
+    .attr("id", "clippy")
+    .attr("x", "0")
+    .attr("y", "1")
+    .attr("height", "248")
+    .attr("width" "356")
+    .append("feColorMatrix")
+    .attr("type", "identity");
             // Add a group for each column.
             var valgroup = svg.selectAll("g.valgroup")
             .data(stacked)
             .enter().append("svg:g")
-            .attr("class", "valgroup")
-            .attr("style", "cursor:move; opacity:0.2; fill: #FF9000")
+.attr("filter", "url(#clippy)")
+    .attr("class", "extent")
+    .attr("style", "cursor:move; opacity:0.2; fill: #FF9000")
             .style("fill", function(d, i) { console.log({d: d, i:i});return z(i); })
             //.style("stroke", function(d, i) { return "white"; /*d3.rgb(z(i)).darker();*/ });
             // Add a rect for each date.
