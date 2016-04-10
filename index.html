@@ -30,7 +30,7 @@
               var matrix = [];
               for (var i = 0; i < rows.length; i++) {
                 var item = rows[i];
-                matrix.push([i, item.arrival_year - item.birth_year, item.current_year - item.arrival_year, 1]);
+                matrix.push([i, item.arrival_year - item.birth_year, item.current_year - item.arrival_year, 0]);
               }
               var w = 1160,
             h = 600
@@ -75,8 +75,8 @@
             .data(stacked)
             .enter().append("svg:g")
             .attr("class", "valgroup")
-            .style("fill", function(d, i) { return z(i); })
-            .style("stroke", function(d, i) { return d3.rgb(z(i)).darker(); });
+            .style("fill", function(d, i) { console.log({d: d, i:i});return z(i); })
+            //.style("stroke", function(d, i) { return d3.rgb(z(i)).darker(); });
             // Add a rect for each date.
             var rect = valgroup.selectAll("rect")
             .data(function(d){return d;})
