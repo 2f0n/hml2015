@@ -30,7 +30,11 @@
               var matrix = [];
               for (var i = 0; i < rows.length; i++) {
                 var item = rows[i];
-                matrix.push([i, item.arrival_year - item.birth_year, item.current_year - item.arrival_year, 0]);
+                var a = item.arrival_year - item.birth_year;
+                var b = item.current_year - item.arrival_year;
+                var c = 0;
+                if (a > 0 && b > 0)
+                  matrix.push([i, a, b, c]);
               }
               var w = 1160,
             h = 600
